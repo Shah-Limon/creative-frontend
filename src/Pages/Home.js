@@ -12,6 +12,7 @@ import ContactPage from "./ContactPage";
 import CounterSection from "../components/HomePage/CounterSection";
 import VideoSection from "../components/HomePage/VideoSection";
 import CtaSection from "../components/HomePage/CtaSection";
+import PricePage from "./PricePage";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <CounterSection></CounterSection>
       <VideoSection></VideoSection>
       <FeaturesPage></FeaturesPage>
+      <PricePage></PricePage>
 
       <Testimonials></Testimonials>
       <ContactPage></ContactPage>

@@ -10,7 +10,7 @@ const AuditRequest = () => {
   const [data, setData] = useState([]);
   const [users, setUsers] = useState([]);
   const [user] = useAuthState(auth);
-  const itemsPerPage = 10; 
+  const itemsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -65,67 +65,80 @@ const AuditRequest = () => {
   return (
     <div>
       <BackToAdminDashboard></BackToAdminDashboard>
-      {users.map((u) =>
-        user?.email === u.userEmail &&
-        (u.userRole === "Admin" || u.userRole === "Manager") && (
-          <div>
-            <div className="container">
-              <h5 className="text-center mt-15">Audit Request</h5>
-              <div className="custom-ordermenu">
-                <div className="header__right container custom-orders">
-                  <nav id="main-nav" className="main-nav">
-                    <ul id="menu-primary-menu" className="menu custom-orders-ul">
-                      <li className="menu-item menu-item-has-children">
-                        <Link to="/admin/complete-audit-request/" class="action-btn">
-                          Complete Audit Request
-                        </Link>
-                      </li>
-                      <li className="menu-item menu-item-has-children">
-                        <Link to="/admin/incomplete-audit-request/" class="action-btn">
-                          Incomplete Audit Request
-                        </Link>
-                      </li>
-                    </ul>
-                  </nav>
+      {users.map(
+        (u) =>
+          user?.email === u.userEmail &&
+          (u.userRole === "Admin" || u.userRole === "Manager") && (
+            <div>
+              <div className="container">
+                <h5 className="text-center mt-15">Audit Request</h5>
+                <div className="custom-ordermenu">
+                  <div className="header__right container custom-orders">
+                    <nav
+                      id="main-nav"
+                      className="main-nav d-flex justify-content-center"
+                    >
+                      <ul
+                        id="menu-primary-menu"
+                        className="menu custom-orders-ul d-flex justify-content-center align-items-center"
+                      >
+                        <li className="menu-item menu-item-has-children mx-2">
+                          <Link
+                            to="/admin/complete-audit-request/"
+                            className="main-btn"
+                          >
+                            Complete Audit Request
+                          </Link>
+                        </li>
+                        <li className="menu-item menu-item-has-children mx-2">
+                          <Link
+                            to="/admin/incomplete-audit-request/"
+                            className="main-btn"
+                          >
+                            Incomplete Audit Request
+                          </Link>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
                 </div>
-              </div>
-              <table className="rwd-table">
-                <tbody>
-                  <tr>
-                    <th>SL No.</th>
-                    <th>Website Name</th>
-                    <th>Email</th>
-                    <th>Audit Status</th>
-                    <th>Edit</th>
-                    <th>-</th>
-                  </tr>
-                  {displayData}
-                </tbody>
-              </table>
-              <div className="pagination">
+                <table className="rwd-table">
+                  <tbody>
+                    <tr>
+                      <th>SL No.</th>
+                      <th>Website Name</th>
+                      <th>Email</th>
+                      <th>Audit Status</th>
+                      <th>Edit</th>
+                      <th>-</th>
+                    </tr>
+                    {displayData}
+                  </tbody>
+                </table>
+                <div className="pagination">
                   <ul>
                     <li>
                       <div className="d-flex">
-                      <Link
-                        onClick={() => handlePageChange(currentPage - 1)}
-                        disabled={currentPage === 1}
-                      >
-                        {"<"}
-                      </Link>
-                      {renderPaginationLinks()}
-                      <Link
-                        onClick={() => handlePageChange(currentPage + 1)}
-                        disabled={currentPage === pageCount}
-                      >
-                        {">"}
-                      </Link>
+                        <Link
+                          onClick={() => handlePageChange(currentPage - 1)}
+                          disabled={currentPage === 1}
+                        >
+                          {"<"}
+                        </Link>
+                        {renderPaginationLinks()}
+                        <Link
+                          onClick={() => handlePageChange(currentPage + 1)}
+                          disabled={currentPage === pageCount}
+                        >
+                          {">"}
+                        </Link>
                       </div>
                     </li>
                   </ul>
                 </div>
+              </div>
             </div>
-          </div>
-        )
+          )
       )}
     </div>
   );

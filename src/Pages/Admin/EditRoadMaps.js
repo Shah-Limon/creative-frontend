@@ -254,7 +254,7 @@ const EditRoadMaps = () => {
               </div>
 
               <div class="col-sm">
-                <button type="submit" class="action-btn">
+                <button type="submit" class="main-btn">
                   <span>Update Road Map</span>
                 </button>
               </div>

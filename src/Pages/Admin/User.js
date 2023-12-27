@@ -92,7 +92,7 @@ const User = () => {
               </div>
             </div>
             <div class="col-sm">
-              <button type="submit" class="action-btn">
+              <button type="submit" class="main-btn">
                 <span>Update User</span>
               </button>
             </div>

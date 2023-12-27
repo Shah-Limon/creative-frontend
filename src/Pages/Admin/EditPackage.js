@@ -254,7 +254,7 @@ const EditPackage = () => {
             </div>
 
             <div class="col-sm">
-              <button type="submit" class="action-btn">
+              <button type="submit" class="main-btn">
                 <span>Update Package</span>
               </button>
             </div>

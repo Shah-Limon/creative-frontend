@@ -44,15 +44,18 @@ const HelpDesk = () => {
             <div className="col-12">
               <div className="row mb-0"></div>
 
-              <div className="block-text center">
+              <div className="block-text text-center">
                 <h6 className="sub-heading">
                   <span>Help Desk</span>
                 </h6>
                 <h3 className="heading">Customer Support Hub</h3>
 
-                <div className="container">
-                  <h5 mt-15>List of the User Submitted Tickets</h5>
-                  <HelpDeskMenu></HelpDeskMenu> <br></br>
+                <div className="container mb-5">
+                  <h5 mt-5>List of the User Submitted Tickets</h5>
+                  <div className="mt-5">
+                    <HelpDeskMenu></HelpDeskMenu>
+                  </div>{" "}
+                  <br></br>
                   <table className="rwd-table" style={{ marginTop: "2rem" }}>
                     <tbody>
                       <tr>

@@ -14,18 +14,24 @@ const ContactUsMessages = () => {
   return (
     <>
       <div className="container">
-      <BackToAdminDashboard></BackToAdminDashboard>
-      <div className="custom-ordermenu">
+        <BackToAdminDashboard></BackToAdminDashboard>
+        <div className="custom-ordermenu d-flex justify-content-center align-items-center">
           <div className="header__right container custom-orders">
-            <nav id="main-nav" className="main-nav">
-              <ul id="menu-primary-menu" className="menu custom-orders-ul">
-                <li className="menu-item menu-item-has-children">
-                  <Link to="/admin/contact-message-unread/" class="action-btn">
+            <nav id="main-nav" className="main-nav mt-5">
+              <ul
+                id="menu-primary-menu"
+                className="menu custom-orders-ul d-flex justify-content-center"
+              >
+                <li className="menu-item menu-item-has-children mx-2">
+                  <Link
+                    to="/admin/contact-message-unread/"
+                    className="main-btn"
+                  >
                     Unread Contact Messages
                   </Link>
                 </li>
-                <li className="menu-item menu-item-has-children">
-                  <Link to="/admin/contact-message-read/" class="action-btn">
+                <li className="menu-item menu-item-has-children mx-2">
+                  <Link to="/admin/contact-message-read/" className="main-btn">
                     Read Contact Messages
                   </Link>
                 </li>
@@ -33,7 +39,7 @@ const ContactUsMessages = () => {
             </nav>
           </div>
         </div>
-     
+
         <table className="rwd-table">
           <tbody>
             <tr>

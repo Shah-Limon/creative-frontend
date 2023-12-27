@@ -149,7 +149,7 @@ const Register = () => {
                               <div className="text-center">
                                 <button
                                   type="submit"
-                                  className="action-btn w-full text-center"
+                                  className="main-btn w-full text-center"
                                 >
                                   <span> Register</span>
                                 </button>

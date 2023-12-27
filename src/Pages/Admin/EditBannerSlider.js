@@ -106,7 +106,7 @@ const EditBannerSlider = () => {
             </div>
 
             <div class="col-sm">
-              <button type="submit" class="action-btn">
+              <button type="submit" class="main-btn">
                 <span>Update Slider</span>
               </button>
             </div>

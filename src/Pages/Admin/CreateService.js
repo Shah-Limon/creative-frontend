@@ -155,7 +155,7 @@ const CreateService = () => {
 
         {servicesTitle.map((e) => (
           <Link key={e.id} to={`/admin/edit-service-title/${e._id}`}>
-            <h6 className="mt-15 action-btn">
+            <h6 className="mt-15 main-btn">
               <span>Edit Service Title</span>
             </h6>
           </Link>

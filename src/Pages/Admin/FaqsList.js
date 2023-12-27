@@ -128,7 +128,7 @@ const FaqsList = () => {
             </div>
 
             <div class="col-sm">
-              <button type="submit" class="action-btn">
+              <button type="submit" class="main-btn">
                 <span>Update Title</span>
               </button>
             </div>
@@ -165,7 +165,7 @@ const FaqsList = () => {
            
 
             <div class="col-sm">
-              <button type="submit" class="action-btn">
+              <button type="submit" class="main-btn">
                 <span>Add Faq</span>
               </button>
             </div>
@@ -179,7 +179,7 @@ const FaqsList = () => {
             <>
               <Link
                 to={`/admin/faqs-title/${e._id}`}
-                class="action-btn"
+                class="main-btn"
               >
                 <span>Update Faqs Title</span>
               </Link>

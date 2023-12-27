@@ -50,13 +50,13 @@ const SolvedTicket = () => {
             <div className="col-12">
               <div className="row mb-0"></div>
 
-              <div className="block-text center">
+              <div className="block-text text-center">
                 <h6 className="sub-heading">
                   <span>Help Desk</span>
                 </h6>
                 <h3 className="heading">Customer Support Hub</h3>
 
-                <div className="container">
+                <div className="container mb-5">
                   <h5 mt-15>List of the Open Tickets</h5>
                   <HelpDeskMenu></HelpDeskMenu> <br></br>
                   <table className="rwd-table" style={{ marginTop: "2rem" }}>

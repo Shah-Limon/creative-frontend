@@ -169,7 +169,7 @@ const HomaPageSetting = () => {
             <div className="col-lg-3">
               <div className="block-text center">
                 <div className="col">
-                  <h5 className="heading">Why Choose Option</h5>
+                  <h5 className="heading">Cta Option</h5>
 
                   {choose.map((e) => (
                     <Link
@@ -183,7 +183,7 @@ const HomaPageSetting = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3">
+            {/* <div className="col-lg-3">
               <div className="block-text center">
                 <div className="col">
                   <h5 className="heading">Road Map Option</h5>
@@ -196,8 +196,8 @@ const HomaPageSetting = () => {
                   <hr></hr>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-3">
+            </div> */}
+            {/* <div className="col-lg-3">
               <div className="block-text center">
                 <div className="col">
                   <h5 className="heading">Team Members Option</h5>
@@ -210,7 +210,7 @@ const HomaPageSetting = () => {
                   <hr></hr>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-3">
               <div className="block-text center">
                 <div className="col">

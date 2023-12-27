@@ -121,7 +121,7 @@ const ManageUsers = () => {
               </div>
             </div>
             <div class="col-sm">
-              <button type="submit" class="action-btn">
+              <button type="submit" class="main-btn">
                 <span>Add User</span>
               </button>
             </div>

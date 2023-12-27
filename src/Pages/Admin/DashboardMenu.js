@@ -35,7 +35,22 @@ const DashboardMenu = () => {
           <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-5">
             <div className="information-style-two col mb-3 text-center">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png"
+                src="https://cdn-icons-png.flaticon.com/512/1225/1225258.png?uid=R54525292"
+                className="img-fluid rounded-top"
+                width={50}
+                alt=""
+              />
+              <div className="info">
+                <h4>
+                  <Link to="/admin/packages/" className="h5 title">
+                    <h5 className="blue-dark">Package Edit</h5>
+                  </Link>
+                </h4>
+              </div>
+            </div>
+            <div className="information-style-two col mb-3 text-center">
+              <img
+                src="https://i.postimg.cc/kXKtbTPL/shopping-list-3541315.png"
                 className="img-fluid rounded-top"
                 width={50}
                 alt=""
@@ -51,7 +66,7 @@ const DashboardMenu = () => {
 
             <div className="information-style-two col mb-3 text-center">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png"
+                src="https://i.postimg.cc/Vkw0BXYv/setting-12711143.png"
                 className="img-fluid rounded-top"
                 width={50}
                 alt=""
@@ -66,7 +81,7 @@ const DashboardMenu = () => {
             </div>
             <div className="information-style-two col mb-3 text-center">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png"
+                src="https://i.postimg.cc/jjK9b3RT/help-desk-4840332.png"
                 className="img-fluid rounded-top"
                 width={50}
                 alt=""
@@ -81,7 +96,7 @@ const DashboardMenu = () => {
             </div>
             <div className="information-style-two col mb-3 text-center">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png"
+                src="https://i.postimg.cc/13DTb1hM/email-4213166.png"
                 className="img-fluid rounded-top"
                 width={50}
                 alt=""
@@ -111,7 +126,7 @@ const DashboardMenu = () => {
             </div>
             <div className="information-style-two col mb-3 text-center">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png"
+                src="https://i.postimg.cc/wBVrT5Bm/team-management-8526176.png"
                 className="img-fluid rounded-top"
                 width={50}
                 alt=""
@@ -126,7 +141,7 @@ const DashboardMenu = () => {
             </div>
             <div className="information-style-two col mb-3 text-center">
               <img
-                src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png"
+                src="https://i.postimg.cc/NMjzyyyP/investigation-9773465.png"
                 className="img-fluid rounded-top"
                 width={50}
                 alt=""

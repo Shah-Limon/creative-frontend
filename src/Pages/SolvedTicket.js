@@ -4,7 +4,6 @@ import HelpDeskMenu from "./HelpDeskMenu";
 import BackToAdminDashboard from "./Admin/BackToAdminDashboard";
 
 const SolvedTicket = () => {
-
   const [tickets, setTickets] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
@@ -50,7 +49,7 @@ const SolvedTicket = () => {
             <div className="col-12">
               <div className="row mb-0"></div>
 
-              <div className="block-text center">
+              <div className="block-text text-center">
                 <h6 className="sub-heading">
                   <span>Help Desk</span>
                 </h6>

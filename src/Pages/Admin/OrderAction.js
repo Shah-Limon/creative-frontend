@@ -73,7 +73,7 @@ const OrderAction = () => {
             </div>
 
             <div class="col-sm mb-15">
-              <button type="submit" class="action-btn">
+              <button type="submit" class="main-btn">
                 <span>Update</span>
               </button>
             </div>

@@ -85,7 +85,7 @@ const ResetPassword = () => {
                                   <button
                                     onClick={handleResetPassword}
                                     type="submit"
-                                    className="action-btn w-full text-center"
+                                    className="main-btn w-full text-center"
                                   >
                                     <span> Send Reset Email</span>
                                   </button>

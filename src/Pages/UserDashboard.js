@@ -9,11 +9,10 @@ const UserDashboard = () => {
   const [data, setData] = useState([]);
   const [orders, setOrders] = useState([]);
   const [user] = useAuthState(auth);
-  const [services, setServices] = useState([]); 
+  const [services, setServices] = useState([]);
   const itemsPerPage = 10; // Number of items to display per page
   const [currentPageOrders, setCurrentPageOrders] = useState(1);
   const [currentPageData, setCurrentPageData] = useState(1);
-
 
   useEffect(() => {
     fetch(`http://localhost:5000/website`)
@@ -27,14 +26,11 @@ const UserDashboard = () => {
       .then((info) => setOrders(info.reverse()));
   }, []);
 
-
-
-
   useEffect(() => {
-     fetch(`http://localhost:5000/services-list/`)
-       .then((res) => res.json())
-       .then((info) => setServices(info));
-   }, []);
+    fetch(`http://localhost:5000/services-list/`)
+      .then((res) => res.json())
+      .then((info) => setServices(info));
+  }, []);
 
   let rowNumberOrders = (currentPageOrders - 1) * itemsPerPage + 1;
   let rowNumberData = (currentPageData - 1) * itemsPerPage + 1;
@@ -75,7 +71,7 @@ const UserDashboard = () => {
                 <th>SL No.</th>
                 <th>Date</th>
                 <th>Order ID</th>
-                <th>Service</th>
+
                 <th>Package</th>
                 <th>Price</th>
                 <th>Payment Status</th>
@@ -95,16 +91,6 @@ const UserDashboard = () => {
                     <td>{order.orderDate}</td>
                     <td>{order.orderId}</td>
 
-                    <td data-th="Service">
-                    {services.map(
-                      (service) =>
-                        service._id === order.serviceID && (
-                          <Link to={`/service/${service.postSlug}`}>
-                            {service.title}
-                          </Link>
-                        )
-                    )}
-                  </td>
                     <td>{order.packageName}</td>
                     <td>{order.packagePrice}$</td>
                     <td>{order.paymentStatus}</td>
@@ -126,7 +112,7 @@ const UserDashboard = () => {
           </table>
 
           {/* Pagination for Orders */}
-          <div className="pagination">
+          {/* <div className="pagination">
             <ul>
               {Array.from({ length: totalPagesOrders }, (_, index) => {
                 return (
@@ -138,6 +124,29 @@ const UserDashboard = () => {
                       className={
                         currentPageOrders === index + 1 ? "active" : ""
                       }
+                    >
+                      {index + 1}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div> */}
+          <div className="pagination">
+            <ul className="pagination justify-content-center">
+              {" "}
+              {/* Added Bootstrap classes */}
+              {Array.from({ length: totalPagesOrders }, (_, index) => {
+                return (
+                  <li
+                    key={index}
+                    className={`page-item ${
+                      currentPageOrders === index + 1 ? "active" : ""
+                    }`}
+                  >
+                    <Link
+                      onClick={() => handlePageChangeOrders(index + 1)}
+                      className="page-link" // Bootstrap pagination link class
                     >
                       {index + 1}
                     </Link>

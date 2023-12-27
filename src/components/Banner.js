@@ -154,7 +154,7 @@ const Banner = () => {
                           value={user?.email}
                         />
                         <div class="col-sm">
-                          <button type="submit" class="action-btn">
+                          <button type="submit" class="main-btn">
                             <span>Submit</span>
                           </button>
                         </div>

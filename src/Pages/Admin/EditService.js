@@ -225,7 +225,7 @@ const EditService = () => {
           ServicePackage.filter(plan => plan.serviceID === service._id).length < 3 &&
           <Link
           to={`/admin/add-service-package/${id}`}
-          className="mt-15 action-btn"
+          className="mt-15 main-btn"
         >
           <span>Add Service Package</span>
         </Link>

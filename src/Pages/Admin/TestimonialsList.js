@@ -101,7 +101,7 @@ const TestimonialsList = () => {
             </div>
 
             <div class="col-sm">
-              <button type="submit" class="action-btn">
+              <button type="submit" class="main-btn">
                 <span>Add Testimonial</span>
               </button>
             </div>
@@ -122,7 +122,7 @@ const TestimonialsList = () => {
             <>
               <Link
                 to={`/admin/edit-testimonial-title/${e._id}`}
-                class="action-btn"
+                class="main-btn"
               >
                 <span>Update Testimonial Title</span>
               </Link>

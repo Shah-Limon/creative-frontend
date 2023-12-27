@@ -52,7 +52,7 @@ const SolvedTicket = () => {
             <div className="col-12">
               <div className="row mb-0"></div>
 
-              <div className="block-text center">
+              <div className="block-text text-center">
                 <h6 className="sub-heading">
                   <span>Help Desk</span>
                 </h6>

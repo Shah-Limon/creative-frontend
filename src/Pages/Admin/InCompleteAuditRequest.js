@@ -65,7 +65,7 @@ const InCompleteAuditRequest = () => {
 
   return (
     <div>
-       <BackToAdminDashboard></BackToAdminDashboard>
+      <BackToAdminDashboard></BackToAdminDashboard>
       {users.map(
         (u) =>
           user?.email === u.userEmail &&
@@ -79,23 +79,26 @@ const InCompleteAuditRequest = () => {
                 <h5 className="text-center mt-15">Audit Request</h5>
                 <div className="custom-ordermenu">
                   <div className="header__right container custom-orders">
-                    <nav id="main-nav" className="main-nav">
+                    <nav
+                      id="main-nav"
+                      className="main-nav d-flex justify-content-center"
+                    >
                       <ul
                         id="menu-primary-menu"
-                        className="menu custom-orders-ul"
+                        className="menu custom-orders-ul d-flex justify-content-center align-items-center"
                       >
-                        <li className="menu-item menu-item-has-children">
+                        <li className="menu-item menu-item-has-children mx-2">
                           <Link
                             to="/admin/complete-audit-request/"
-                            class="action-btn"
+                            className="main-btn"
                           >
                             Complete Audit Request
                           </Link>
                         </li>
-                        <li className="menu-item menu-item-has-children">
+                        <li className="menu-item menu-item-has-children mx-2">
                           <Link
                             to="/admin/incomplete-audit-request/"
-                            class="action-btn"
+                            className="main-btn"
                           >
                             Incomplete Audit Request
                           </Link>
@@ -120,11 +123,7 @@ const InCompleteAuditRequest = () => {
                 <div className="pagination">
                   <ul>
                     <li>
-                      <div className="d-flex">
-                     
-                      {renderPaginationLinks()}
-                      
-                      </div>
+                      <div className="d-flex">{renderPaginationLinks()}</div>
                     </li>
                   </ul>
                 </div>

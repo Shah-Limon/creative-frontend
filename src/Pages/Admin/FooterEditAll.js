@@ -121,7 +121,7 @@ const FooterEditAll = () => {
             </div>
 
             <div class="col-sm">
-              <button type="submit" class="action-btn">
+              <button type="submit" class="main-btn">
                 <span>Update</span>
               </button>
             </div>
@@ -190,7 +190,7 @@ const FooterEditAll = () => {
             </div>
 
             <div class="col-sm">
-              <button type="submit" class="action-btn">
+              <button type="submit" class="main-btn">
                 <span>Update</span>
               </button>
             </div>

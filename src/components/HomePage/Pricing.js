@@ -144,7 +144,7 @@ const Pricing = () => {
                                 ></img>
                                 <span>{p.featureTen}</span>
                               </li>
-                              <Link class="action-btn" to={`/package/${p._id}`}>
+                              <Link class="main-btn" to={`/package/${p._id}`}>
                                 {" "}
                                 <span>Buy Now</span>
                               </Link>

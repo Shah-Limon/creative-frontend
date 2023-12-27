@@ -147,7 +147,7 @@ const Login = () => {
                               <div className="text-center">
                                 <button
                                   type="submit"
-                                  className="action-btn w-full text-center"
+                                  className="main-btn w-full text-center"
                                 >
                                   <span> Sign In</span>
                                 </button>

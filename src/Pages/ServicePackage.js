@@ -207,7 +207,7 @@ const ServicePackage = () => {
           </div>
         </div>
         <div class="col-sm">
-          <button type="submit" class="action-btn">
+          <button type="submit" class="main-btn">
             <span>Place Order and Continue For Make Payment</span>
           </button>
         </div>

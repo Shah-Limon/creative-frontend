@@ -74,20 +74,32 @@ const CompleteAuditRequest = () => {
               <h5 className="text-center mt-15">Audit Request</h5>
               <div className="custom-ordermenu">
                 <div className="header__right container custom-orders">
-                  <nav id="main-nav" className="main-nav">
-                    <ul id="menu-primary-menu" className="menu custom-orders-ul">
-                      <li className="menu-item menu-item-has-children">
-                        <Link to="/admin/complete-audit-request/" class="action-btn">
-                          Complete Audit Request
-                        </Link>
-                      </li>
-                      <li className="menu-item menu-item-has-children">
-                        <Link to="/admin/incomplete-audit-request/" class="action-btn">
-                          Incomplete Audit Request
-                        </Link>
-                      </li>
-                    </ul>
-                  </nav>
+                <nav
+                      id="main-nav"
+                      className="main-nav d-flex justify-content-center"
+                    >
+                      <ul
+                        id="menu-primary-menu"
+                        className="menu custom-orders-ul d-flex justify-content-center align-items-center"
+                      >
+                        <li className="menu-item menu-item-has-children mx-2">
+                          <Link
+                            to="/admin/complete-audit-request/"
+                            className="main-btn"
+                          >
+                            Complete Audit Request
+                          </Link>
+                        </li>
+                        <li className="menu-item menu-item-has-children mx-2">
+                          <Link
+                            to="/admin/incomplete-audit-request/"
+                            className="main-btn"
+                          >
+                            Incomplete Audit Request
+                          </Link>
+                        </li>
+                      </ul>
+                    </nav>
                 </div>
               </div>
               <table className="rwd-table">

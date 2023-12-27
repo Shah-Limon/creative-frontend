@@ -26,6 +26,7 @@ const ServiceDetails = () => {
       .then((res) => res.json())
       .then((info) => setTitle(info));
   }, []);
+
   const [ServicePackage, setServicesPackages] = useState([]);
   useEffect(() => {
     fetch(` http://localhost:5000/service-packages`)
@@ -35,26 +36,60 @@ const ServiceDetails = () => {
 
   return (
     <>
-      <section
-        className="touch"
-        data-aos="fade-up"
-        data-aos-duration={2000}
-        style={{ padding: "104px 0 25px", marginBottom: "20px" }}
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="block-text center">
-                <h6 className="sub-heading">
+      <section className="touch" data-aos="fade-up" data-aos-duration={2000}>
+        <section className="page-banner bg_cover position-relative z-1">
+          <div className="shape shape-one scene">
+            <span data-depth={1}>
+              <img
+                src="https://wordpressriverthemes.com/htmltemp/pixlab/assets/images/shape/shape-1.png"
+                alt
+              />
+            </span>
+          </div>
+          <div className="shape shape-two scene">
+            <span data-depth={2}>
+              <img
+                src="https://wordpressriverthemes.com/htmltemp/pixlab/assets/images/shape/shape-2.png"
+                alt
+              />
+            </span>
+          </div>
+          <div className="shape shape-three scene">
+            <span data-depth={3}>
+              <img
+                src="https://wordpressriverthemes.com/htmltemp/pixlab/assets/images/shape/shape-3.png"
+                alt
+              />
+            </span>
+          </div>
+          <div className="shape shape-four scene">
+            <span data-depth={4}>
+              <img
+                src="https://wordpressriverthemes.com/htmltemp/pixlab/assets/images/shape/shape-2.png"
+                alt
+              />
+            </span>
+          </div>
+
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-7">
+                <div className="page-title">
                   <span>Service Details</span>
-                </h6>
-                <h4 className="heading wow" data-splitting="">
-                  {serviceData.title}
-                </h4>
+                  <h2> {serviceData.title}</h2>
+                </div>
+              </div>
+              <div className="col-lg-5">
+                <div
+                  className="page-banner-img"
+                  style={{ marginBottom: "-100px" }}
+                >
+                  <img src={serviceData.img} alt="services images" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </section>
 
       <div className="card-box__features_card">
@@ -68,19 +103,9 @@ const ServiceDetails = () => {
           <div className="container">
             <>
               <div className="row  justify-content-center">
-                <div className="col-lg-5 col-md-12">
-                  <div className="about__right">
-                    <div className="images">
-                      <img className="img1" src={serviceData.img} alt="" />
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-7 col-md-12">
+                <div className="col-lg-12 col-md-12">
                   <div className="block-text">
-                    {/* <h4 className="heading wow" data-splitting="">
-                      {serviceData.title}
-                    </h4> */}
-                    <p className="mb-17 feature__text-left">
+                    <p className="mb-17 feature__text-left mt-5">
                       {serviceData.description &&
                         serviceData.description
                           .split("\n")
@@ -105,233 +130,70 @@ const ServiceDetails = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="testimonials__main">
-                {title.map((e) => (
-                  <div className="block-text center">
-                    <h3 className="heading">
-                      {e.titleOne} <br />
-                      {e.titleTwo}
-                    </h3>
-                    <p className="mt-15"> {e.description}</p>
-                  </div>
-                ))}
-                {/* <div className="swiper testimonials-swiper s2">
-                  <div className="container">
-                    <div className="row">
-                      {ServicePackage.map(
-                        (e) =>
-                          serviceData._id === e.serviceID && (
-                            <div className="col-lg-4 col-md-6 col-12 margin__mobile">
-                              <div className="swiper-slide service_card z-3">
-                                <div className="box-testimonial center">
-                                  <div className="image">
-                                    <img src={e.img} alt="" />
-                                  </div>
-                                  <div className="info">
-                                    <h5 className="name">${e.price} USD</h5>
-
-                                    <p>{e.packageName}</p>
-                                    <img
-                                      src="https://themesflat.co/html/cyfoniihtml/assets/images/icon/quote-2.png"
-                                      alt=""
-                                    />
-                                  </div>
-                                  <li className="text1">
-                                    <img
-                                      style={margin0}
-                                      src="https://i.ibb.co/HnrpzH6/icons8-tick-16.png"
-                                      alt="images"
-                                    ></img>
-                                    <span>{e.featureOne}</span>
-                                  </li>
-                                  <li className="text1">
-                                    <img
-                                      style={margin0}
-                                      src="https://i.ibb.co/HnrpzH6/icons8-tick-16.png"
-                                      alt="images"
-                                    ></img>
-                                    <span>{e.featureTwo}</span>
-                                  </li>{" "}
-                                  <li className="text1">
-                                    <img
-                                      style={margin0}
-                                      src="https://i.ibb.co/HnrpzH6/icons8-tick-16.png"
-                                      alt="images"
-                                    ></img>
-                                    <span>{e.featureThree}</span>
-                                  </li>{" "}
-                                  <li className="text1">
-                                    <img
-                                      style={margin0}
-                                      src="https://i.ibb.co/HnrpzH6/icons8-tick-16.png"
-                                      alt="images"
-                                    ></img>
-                                    <span>{e.featureFour}</span>
-                                  </li>{" "}
-                                  <li className="text1">
-                                    <img
-                                      style={margin0}
-                                      src="https://i.ibb.co/HnrpzH6/icons8-tick-16.png"
-                                      alt="images"
-                                    ></img>
-                                    <span>{e.featureFive}</span>
-                                  </li>{" "}
-                                  <li className="text1">
-                                    <img
-                                      style={margin0}
-                                      src="https://i.ibb.co/HnrpzH6/icons8-tick-16.png"
-                                      alt="images"
-                                    ></img>
-                                    <span>{e.featureSix}</span>
-                                  </li>{" "}
-                                  <li className="text1">
-                                    <img
-                                      style={margin0}
-                                      src="https://i.ibb.co/HnrpzH6/icons8-tick-16.png"
-                                      alt="images"
-                                    ></img>
-                                    <span>{e.featureSeven}</span>
-                                  </li>{" "}
-                                  <li className="text1">
-                                    <img
-                                      style={margin0}
-                                      src="https://i.ibb.co/HnrpzH6/icons8-tick-16.png"
-                                      alt="images"
-                                    ></img>
-                                    <span>{e.featureEight}</span>
-                                  </li>{" "}
-                                  <li className="text1">
-                                    <img
-                                      style={margin0}
-                                      src="https://i.ibb.co/HnrpzH6/icons8-tick-16.png"
-                                      alt="images"
-                                    ></img>
-                                    <span>{e.featureNine}</span>
-                                  </li>
-                                  <li className="text1">
-                                    <img
-                                      style={margin0}
-                                      src="https://i.ibb.co/HnrpzH6/icons8-tick-16.png"
-                                      alt="images"
-                                    ></img>
-                                    <span>{e.featureTen}</span>
-                                  </li>
-                                  <Link
-                                    class="action-btn"
-                                    to={`/service-package/${e._id}`}
-                                  >
-                                    {" "}
-                                    <span>Buy Now</span>
-                                  </Link>
-                                </div>
-                              </div>
-                            </div>
-                          )
-                      )}
-                    </div>
-                  </div>
-                </div> */}
-
                 <section className="pricing-area pricing-area-v1">
                   <div className="container-1350">
                     <div className="pricing-wrapper pt-75 pb-70">
                       <div className="row justify-content-center">
                         <div className="col-lg-6">
                           <div className="section-title text-center mb-55">
-                            <h2>Pricing Package</h2>
-                            <p>
-                              Professional Design Agency to provide solutions
-                            </p>
+                            {title.map((e) => (
+                              <>
+                                <h2>
+                                  {" "}
+                                  {e.titleOne} <br />
+                                  {e.titleTwo}
+                                </h2>
+                                <p>{e.description}</p>
+                              </>
+                            ))}
                           </div>
                         </div>
                       </div>
                       <div className="row justify-content-center">
-                        <div className="col-lg-4 col-md-6 col-sm-12">
-                          <div className="pricing-item pricing-item-one mb-40 wow fadeInUp">
-                            <div className="pricing-head text-center">
-                              <span className="plan">Basic Plan</span>
-                              <h2 className="price">
-                                <span className="currency">$</span>16.95
-                              </h2>
-                            </div>
-                            <div className="pricing-body">
-                              <p>
-                                Sit amet consectetur adiising seddo eiusmod teme
-                              </p>
-                              <ul className="pricing-list">
-                                <li className="check">Web Design</li>
-                                <li className="check">Web Development</li>
-                                <li className="check">SEO Optimizations</li>
-                                <li className="uncheck">Online Support</li>
-                                <li className="uncheck">
-                                  Domain &amp; Hosting
-                                </li>
-                              </ul>
-                              <a
-                                href="contact.html"
-                                className="main-btn arrow-btn"
-                              >
-                                Choose Plan
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-12">
-                          <div className="pricing-item pricing-item-one mb-40 wow fadeInUp">
-                            <div className="ribbon">Popular</div>
-                            <div className="pricing-head text-center">
-                              <span className="plan">Standard Plan</span>
-                              <h2 className="price">
-                                <span className="currency">$</span>46.95
-                              </h2>
-                            </div>
-                            <div className="pricing-body">
-                              <p>
-                                Sit amet consectetur adiising seddo eiusmod teme
-                              </p>
-                              <ul className="pricing-list">
-                                <li className="check">Web Design</li>
-                                <li className="check">Web Development</li>
-                                <li className="check">SEO Optimizations</li>
-                                <li className="check">Online Support</li>
-                                <li className="check">Domain &amp; Hosting</li>
-                              </ul>
-                              <a
-                                href="contact.html"
-                                className="main-btn arrow-btn"
-                              >
-                                Choose Plan
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-12">
-                          <div className="pricing-item pricing-item-one mb-40 wow fadeInUp">
-                            <div className="pricing-head text-center">
-                              <span className="plan">Silver Plan</span>
-                              <h2 className="price">
-                                <span className="currency">$</span>96.95
-                              </h2>
-                            </div>
-                            <div className="pricing-body">
-                              <p>
-                                Sit amet consectetur adiising seddo eiusmod teme
-                              </p>
-                              <ul className="pricing-list">
-                                <li className="check">Web Design</li>
-                                <li className="check">Web Development</li>
-                                <li className="check">SEO Optimizations</li>
-                                <li className="check">Online Support</li>
-                                <li className="check">Domain &amp; Hosting</li>
-                              </ul>
-                              <a
-                                href="contact.html"
-                                className="main-btn arrow-btn"
-                              >
-                                Choose Plan
-                              </a>
-                            </div>
-                          </div>
-                        </div>
+                        {ServicePackage.map(
+                          (e) =>
+                            serviceData._id === e.serviceID && (
+                              <div className="col-lg-4 col-md-6 col-sm-12">
+                                <div className="pricing-item pricing-item-one mb-40 wow fadeInUp">
+                                  <div className="pricing-head text-center">
+                                    <span className="plan">
+                                      {e.packageName}
+                                    </span>
+                                    <h2 className="price">
+                                      <span className="currency">$</span>
+                                      {e.price}
+                                    </h2>
+                                  </div>
+                                  <div className="pricing-body">
+                                    <ul className="pricing-list">
+                                      <li className="check">{e.featureOne}</li>
+                                      <li className="check">{e.featureTwo}</li>
+                                      <li className="check">
+                                        {e.featureThree}
+                                      </li>
+                                      <li className="check">{e.featureFour}</li>
+                                      <li className="check">{e.featureFive}</li>
+                                      <li className="check">{e.featureSix}</li>
+                                      <li className="check">
+                                        {e.featureSeven}
+                                      </li>
+                                      <li className="check">
+                                        {e.featureEight}
+                                      </li>
+                                      <li className="check">{e.featureNine}</li>
+                                      <li className="check">{e.featureTen}</li>
+                                    </ul>
+                                    <Link
+                                      to={`/service-package/${e._id}`}
+                                      className="main-btn arrow-btn"
+                                    >
+                                      Choose Plan
+                                    </Link>
+                                  </div>
+                                </div>
+                              </div>
+                            )
+                        )}
                       </div>
                     </div>
                   </div>

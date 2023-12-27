@@ -69,7 +69,7 @@ const ServicesList = () => {
                               </p>
                             </div>
                             <Link
-                              class="action-btn"
+                              class="main-btn"
                               to={`/service/${e.postSlug}`}
                             >
                               <span>Details</span>

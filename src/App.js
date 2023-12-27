@@ -253,7 +253,7 @@ function App() {
 
 
 
-          <Route path="/service/:slug" element={<RequireAuth><AdminRoute><ServiceDeleits></ServiceDeleits></AdminRoute></RequireAuth>}></Route>
+          <Route path="/service/:slug" element={<ServiceDeleits></ServiceDeleits>}></Route>
           <Route path="/admin/edit-service-title/:id" element={<RequireAuth><AdminRoute><EditServiceTitle></EditServiceTitle></AdminRoute></RequireAuth>}></Route>
           <Route path="/admin/add-service-package/:id" element={<RequireAuth><AdminRoute><AddServicePackage></AddServicePackage></AdminRoute></RequireAuth>}></Route>
           <Route path="/admin/edit-service-package/:id" element={<RequireAuth><AdminRoute><EditServicePackage></EditServicePackage></AdminRoute></RequireAuth>}></Route>
